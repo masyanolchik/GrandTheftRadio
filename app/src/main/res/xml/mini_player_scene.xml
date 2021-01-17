@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        motion:constraintSetEnd="@layout/big_player"
+        motion:constraintSetStart="@layout/mini_player"
+        motion:duration="1000">
+       <KeyFrameSet>
+       </KeyFrameSet>
+        <OnSwipe
+            motion:touchAnchorSide="right"
+            motion:dragDirection="dragUp"
+            motion:touchAnchorId="@+id/track_album" />
+
+    </Transition>
+
+
+    <ConstraintSet
+        android:id="@+id/big_player">
+        <Constraint
+            android:id="@id/touchPanel">
+        <CustomAttribute
+            motion:attributeName="background"
+            motion:customColorDrawableValue="@color/colorPrimary"/>
+        </Constraint>
+
+    </ConstraintSet>
+
+</MotionScene>
